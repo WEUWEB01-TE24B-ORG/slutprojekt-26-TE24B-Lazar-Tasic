@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f6f3;
+  color: #222;
+}
+
+.sidhuvud {
+  background: linear-gradient(135deg, #064e3b, #16a34a);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sidhuvud h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-areas:
+    "hero hero"
+    "traning fakta"
+    "taktik fakta"
+    "spelare fakta";
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+#traning {
+  grid-area: traning;
+}
+
+#taktik {
+  grid-area: taktik;
+}
+
+#spelare {
+  grid-area: spelare;
+}
+
+.kort {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.kort img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.faktaruta {
+  grid-area: fakta;
+  background-color: #dcfce7;
+  border-left: 8px solid #16a34a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: fit-content;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #064e3b;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #16a34a;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #064e3b;
+  color: white;
+}
+
+.morkt-tema {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.morkt-tema .hero,
+.morkt-tema .kort {
+  background-color: #1f2937;
+}
+
+.morkt-tema .faktaruta {
+  background-color: #14532d;
+}
+
+.morkt-tema figcaption {
+  color: #d1d5db;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-areas:
+      "hero"
+      "traning"
+      "taktik"
+      "spelare"
+      "fakta";
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidhuvud {
+    padding: 1.2rem;
+  }
+
+  .sidhuvud h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
